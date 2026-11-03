@@ -17,12 +17,12 @@ Para el MongoDB local creado para esta práctica: `MONGO_DB=mongodb://127.0.0.1:
 |---|---|---|
 | POST | /api/users/register | Pública |
 | POST | /api/users/login | Pública |
-| GET | /api/users/data | Bearer JWT |
+| GET | /api/users/datos | Bearer JWT |
 | GET | /api/tareas | Bearer JWT |
 | POST | /api/tareas | Bearer JWT |
 | PUT | /api/tareas/:id | Bearer JWT |
 | DELETE | /api/tareas/:id | Bearer JWT |
 
-Registro: `{"name":"Pedro","email":"pedro@practica.test","password":"contraseña de prueba"}`. Login: `{"email":"pedro@practica.test","password":"contraseña de prueba"}`. Crear o modificar tarea: `{"descripcion":"Estudiar JWT"}`.
+Registro: `{"nombre":"Pedro","email":"pedro@practica.test","password":"contraseña de prueba"}`. Login: `{"email":"pedro@practica.test","password":"contraseña de prueba"}`. Crear o modificar tarea: `{"descripcion":"Estudiar JWT"}`.
 
 Los endpoints de tareas obtienen el usuario del JWT. El listado filtra por dueño. Modificar y eliminar verifican que la tarea pertenezca al usuario del token.
